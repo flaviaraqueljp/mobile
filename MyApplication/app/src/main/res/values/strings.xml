@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Meu Curso</string>
+    <string name="inst_name">Instituto Tech</string>
+    <string name="course_name">Curso de Desenvolvimento Mobile</string>
+    <string name="course_desc">Aprenda a criar aplicativos Android com Kotlin.</string>
+    <string name="btn_about_course">Conheça o curso</string>
+    <string name="btn_disciplines">Disciplinas</string>
+    <string name="btn_back">Voltar</string>
+
+    <string name="course_duration">Duração: 2 anos</string>
+    <string name="course_modality">Modalidade: Presencial</string>
+    <string name="course_details">Descrição detalhada: Este curso prepara você para desenvolver aplicativos Android modernos utilizando Kotlin.</string>
+
+    <string name="subject_programming">Programação</string>
+    <string name="subject_database">Banco de Dados</string>
+    <string name="subject_software_eng">Engenharia de Software</string>
+    <string name="subject_web_dev">Desenvolvimento Web</string>
+    <string name="subject_mobile_dev">Desenvolvimento Mobile</string>
+    <string name="subject_ai">Inteligência Artificial</string>
+
+    <string name="desc_logo_inst">Logo da Instituição Tech</string>
+    <string name="desc_logo_course">Banner do curso</string>
+</resources>
