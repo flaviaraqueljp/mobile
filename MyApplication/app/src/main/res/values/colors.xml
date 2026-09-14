@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="unipe_blue">#004691</color>
+    <color name="unipe_yellow">#FFCC00</color>
 </resources>
