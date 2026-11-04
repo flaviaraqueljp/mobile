@@ -1,0 +1,207 @@
+import 'package:flutter/material.dart'; 
+
+void main() { 
+
+  runApp(MaterialApp( 
+
+    home: Calculadora(), 
+
+  )); 
+
+} 
+
+class Calculadora extends StatefulWidget { 
+
+  @override 
+
+  _CalculadoraState createState() => _CalculadoraState(); 
+
+} 
+
+class _CalculadoraState extends State<Calculadora> { 
+
+  final TextEditingController num1Controller = 
+
+      TextEditingController(); 
+
+  final TextEditingController num2Controller = 
+
+      TextEditingController(); 
+
+  double resultado = 0; 
+
+  void somar() { 
+
+    setState(() { 
+
+      resultado = 
+
+          double.parse(num1Controller.text) + 
+
+          double.parse(num2Controller.text); 
+
+    }); 
+
+  } 
+
+  void subtrair() { 
+
+    setState(() { 
+
+      resultado = 
+
+          double.parse(num1Controller.text) - 
+
+          double.parse(num2Controller.text); 
+
+    }); 
+
+  } 
+
+  void multiplicar() { 
+
+    setState(() { 
+
+      resultado = 
+
+          double.parse(num1Controller.text) * 
+
+          double.parse(num2Controller.text); 
+
+    }); 
+
+  } 
+
+  void dividir() { 
+
+    setState(() { 
+
+      resultado = 
+
+          double.parse(num1Controller.text) / 
+
+          double.parse(num2Controller.text); 
+
+    }); 
+
+  } 
+
+  @override 
+
+  Widget build(BuildContext context) { 
+
+    return Scaffold( 
+
+      appBar: AppBar( 
+
+        title: Text("Calculadora"), 
+
+      ), 
+
+      body: Padding( 
+
+        padding: EdgeInsets.all(16), 
+
+        child: Column( 
+
+          children: [ 
+
+            TextField( 
+
+              controller: num1Controller, 
+
+              keyboardType: TextInputType.number, 
+
+              decoration: InputDecoration( 
+
+                labelText: "Número 1", 
+
+              ), 
+
+            ), 
+
+            TextField( 
+
+              controller: num2Controller, 
+
+              keyboardType: TextInputType.number, 
+
+              decoration: InputDecoration( 
+
+                labelText: "Número 2", 
+
+              ), 
+
+            ), 
+
+            SizedBox(height: 20), 
+
+            Row( 
+
+              mainAxisAlignment: 
+
+                  MainAxisAlignment.spaceEvenly, 
+
+              children: [ 
+
+                ElevatedButton( 
+
+                  onPressed: somar, 
+
+                  child: Text("+"), 
+
+                ), 
+
+                ElevatedButton( 
+
+                  onPressed: subtrair, 
+
+                  child: Text("-"), 
+
+                ), 
+
+                ElevatedButton( 
+
+                  onPressed: multiplicar, 
+
+                  child: Text("*"), 
+
+                ), 
+
+                ElevatedButton( 
+
+                  onPressed: dividir, 
+
+                  child: Text("/"), 
+
+                ), 
+
+              ], 
+
+            ), 
+
+            SizedBox(height: 20), 
+
+            Text( 
+
+              "Resultado: $resultado", 
+
+              style: TextStyle( 
+
+                fontSize: 24, 
+
+              ), 
+
+            ) 
+
+          ], 
+
+        ), 
+
+      ), 
+
+    ); 
+
+  } 
+
+} 
